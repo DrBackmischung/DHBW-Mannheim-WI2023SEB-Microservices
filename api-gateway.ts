@@ -11,12 +11,6 @@ app.use('/products', createProxyMiddleware({
   pathRewrite: { '^/products': '' },
 }));
 
-app.use('/categories', createProxyMiddleware({
-  target: 'http://localhost:3001',
-  changeOrigin: true,
-  pathRewrite: { '^/categories': '' },
-}));
-
 // User Service
 app.use('/users', createProxyMiddleware({
   target: 'http://localhost:3002',
